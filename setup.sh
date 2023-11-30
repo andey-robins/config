@@ -1,11 +1,8 @@
 #!/bin/zsh
 
-# setup and install spicetify
-# also grab themes and launch
-
-if [[ $(uname) == "Darwin" ]]; then
-  brew install spicetify/homebrew-tap/spicetify-cli
-fi
+echo "This script will put configs in the right places."
+echo "It will not install applications. See install.sh for"
+echo "A list of applications to install."
 
 # initialize spicetify. config info should be brought
 # in with this repo, but then we still need to apply
@@ -23,3 +20,6 @@ spicetify config color_scheme CatppuccinLatte
 
 spicetify apply
 
+# install nvchad for neovim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+alias vim='nvim'

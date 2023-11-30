@@ -1,0 +1,2 @@
+spicetify-cli
+neovim
